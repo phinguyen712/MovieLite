@@ -1,0 +1,48 @@
+#movie_list{
+  height:150px;
+  margin:$lrg-gap 0;
+  .fa-heart{
+    color:red;
+  }
+
+  .fa{
+    background-color:white;
+    box-shadow:none;
+    float:right;
+    opacity:.7;
+  }
+
+  img{
+    height:150px;
+  }
+
+  h4{
+    width:100%;
+    color:$slate-gray;
+  }
+
+  .good_rating{
+    color:green;
+  }
+
+  .bad_rating{
+    color:red;
+  }
+
+  h3{
+    @include vertical_align_center();
+    padding-bottom:10px;
+  }
+  p{
+    color:$text-color;
+    font-size:11px;
+  }
+  .two_fourth{
+    text-align:left;
+    position:relative;
+    margin-top:-20px
+  }
+  .content_container{
+    margin-left:10px;
+  }
+}
