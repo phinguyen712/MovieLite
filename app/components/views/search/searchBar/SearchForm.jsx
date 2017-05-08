@@ -2,8 +2,6 @@ const React = require('react'),
   {connect} = require('react-redux'),
   actions = require('actions');
 
-import CategoryButton from 'CategoryButton';
-import ViewButton from 'ViewButton';
 
 const SearchForm = React.createClass({
 
@@ -42,13 +40,6 @@ const SearchForm = React.createClass({
               Search {searchCategory}
             </button>
         </form>
-        <div>
-          <CategoryButton activeCategory = {searchCategory}
-           category = 'movie'/>
-          <CategoryButton activeCategory = {searchCategory}
-          category = 'series'/>
-        </div>
-        <ViewButton view = '/user'/>
       </div>
     );
   }

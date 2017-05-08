@@ -1,3 +1,9 @@
+## Background
+This is a simple movie app that uses https://www.themoviedb.org/
+- Shows movies that are currently Playing
+- Search features
+- Users can add movies to their "favorite's list"
+
 ## Getting Started
 If you don't have webpack installed yet, you can run the command below:
 ```bash

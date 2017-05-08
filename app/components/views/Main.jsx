@@ -1,7 +1,6 @@
 const 	React = require('react'),
   {connect} = require('react-redux');
 
-import ViewButton from 'ViewButton';
 import Nav from 'Nav';
 
 
