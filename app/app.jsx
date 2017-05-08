@@ -5,8 +5,9 @@ const React = require('react'),
   store = require('configureStore').configure();
 
 import Main from 'Main';
-import Home from 'Home';
+import Discover from 'Discover';
 import User from 'User';
+import Search from 'Search';
 
 
 // App css
@@ -16,9 +17,10 @@ require('style!css!sass!applicationStyles');
 ReactDOM.render(
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path = '/' component={Main}>
-        <IndexRoute  component={Home}/>
-        <Route path = 'user' component={User} />
+      <Route path='/' component={Main}>
+        <IndexRoute  component={Discover}/>
+        <Route path='search' component={Search}/>
+        <Route path='user' component={User}/>
       </Route>
     </Router>
   </Provider>

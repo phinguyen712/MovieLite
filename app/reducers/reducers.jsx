@@ -1,4 +1,4 @@
-export const searchResultsReducer = (state = false, action) => {
+export const searchResultsReducer = (state = [], action) => {
   switch (action.type) {
     case 'UPDATE_SEARCH_RESULTS':
       return action.searchResults;
@@ -36,6 +36,15 @@ export const searchCategoryReducer = (state = 'movie', action) => {
   switch (action.type) {
     case 'CHANGE_SEARCH_CATEGORY':
       return action.category;
+    default:
+      return state;
+  }
+};
+
+export const inTheatreReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_MOVIES_IN_THEATRES':
+      return action.movies;
     default:
       return state;
   }

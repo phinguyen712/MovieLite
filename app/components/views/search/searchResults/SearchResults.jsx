@@ -11,10 +11,10 @@ const SearchResults = React.createClass({
 
   //render base on search sucess or fail
   renderResults(searchResults){
-    if(searchResults.Response === 'True'){
-      return this.renderMovieLists(searchResults.Search);
+    if(searchResults){
+      return this.renderMovieLists(searchResults);
     }else{
-      return <h1>{searchResults.Error}</h1>;
+      return <h3>Your movie does not exist</h3>;
     }
   },
 
@@ -33,11 +33,9 @@ const SearchResults = React.createClass({
 
   render () {
     const {searchResults} = this.props;
+
     return(
       <div className = 'search_results'>
-        <img className = 'waiting_gif'
-          src = 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif'>
-        </img>
         {this.renderResults(searchResults)}
       </div>
     );

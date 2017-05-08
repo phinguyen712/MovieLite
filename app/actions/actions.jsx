@@ -1,4 +1,10 @@
 //  actions for calling reducers
+export const addMoviesInTheatre = (movies) => {
+  return {
+    type: 'ADD_MOVIES_IN_THEATRES',
+    movies
+  };
+};
 
 export const searchResults = (searchResults) => {
   return {

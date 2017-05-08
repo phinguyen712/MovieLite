@@ -13,7 +13,6 @@ const User = React.createClass({
         <div className = 'view_container'>
           <ViewButton view = '/' />
           <Favorites likedMovies = {likedMovies}/>
-          <History searchHistory= {searchHistory}/>
         </div>
     );
   }

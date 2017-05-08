@@ -15,32 +15,41 @@ const MovieList = React.createClass({
 
 
   render(){
-    const {movie} = this.props;
+    const {movie} = this.props,
+      posterUrl = 'https://image.tmdb.org/t/p/w500/' + movie.poster_path,
+      viewUrl = 'https://www.themoviedb.org/movie/' + movie.id;
 
-    const imgUrl = (movie.Poster === 'N/A')?
-    'https://theiimastore.com/assets/img/no_img.png': movie.Poster;
+    const imgUrl = (movie.poster_path === null)?
+    'http://www.freeiconspng.com/uploads/no-image-icon-6.png': posterUrl;
 
     return(
-        <div id = 'movie_list' className = 'clear'>
-          <div className = 'one_fourth'>
-            <h3 className = {this.ratingColor(movie.imdbRating)}>
-            {movie.imdbRating}
-            </h3>
-          </div>
-          <img  className ='one_fourth' src ={imgUrl}/>
-          <div className = 'two_fourth'>
-            <div className = 'content_container'>
+      <div className='clear medium_min_one_half'>
+        <div  className='movie_list'>
+          <img  className='one_half' src ={imgUrl}/>
+          <div className='one_half'>
+            <div className='content_container'>
               <h4>
-                {movie.Title}({movie.Year})
-                <LikeButton movie = {movie}/>
+                {movie.title}
               </h4>
-              <p>
-                Rated:{movie.Rated} Actors:{movie.Actors}
-              </p>
-              <p>{movie.Plot}</p>
+              <h5>
+                {movie.release_date}
+              </h5>
+              <h5 className = {this.ratingColor(movie.vote_average)}>
+                {movie.vote_average}
+              </h5>
+              <div className="overview">
+                {movie.overview}
+              </div>
+            </div>
+            <div className="button_bar">
+               <LikeButton movie={movie}/>
+               <a href={viewUrl} target="_blank">
+                 <i className="fa fa-external-link" aria-hidden="true"></i>
+               </a>
             </div>
           </div>
         </div>
+      </div>
     );
   }
 });

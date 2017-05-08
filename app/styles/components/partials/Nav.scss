@@ -1,0 +1,33 @@
+#nav_bar{
+  width:100%;
+  background-color: $slate-green;
+}
+.nav_menu{
+  display:inline-block;
+  margin:auto;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom:-4px;
+
+  li {
+    float: left;
+  }
+
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+      background-color:$slate-gray;
+  }
+
+  .active {
+      background-color: #4CAF50;
+  }
+
+}

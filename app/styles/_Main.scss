@@ -1,9 +1,12 @@
 #main_container{
-  max-width:$inner-width;
   margin:auto;
   text-align:center;
 }
 
+#body{
+  margin:auto;
+  width:80%;
+}
 .view_container{
   margin-top:100px;
 }

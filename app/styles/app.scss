@@ -9,22 +9,25 @@
 // Components
 @import "components/lists/movielists/MovieList";
 @import "Main";
-@import "components/views/home/Home";
-@import "components/views/home/searchBar/SearchForm";
-@import "components/views/home/searchResults/SearchResults";
+@import "components/views/search/Search";
+@import "components/views/search/searchBar/SearchForm";
+@import "components/views/search/searchResults/SearchResults";
 @import "components/buttons/ViewButton";
+@import "components/partials/Nav";
+@import "components/views/discover/Discover";
+
 
 
 //Gloabl styles
 /////////////////////////////////////////////
 body {
     margin: 0;
-    background-color: white;
+    background-color: $gray-lighter;
     font-family:$main-font;
     font-weight:$light-weight;
 }
 
-input, button {
+input, button{
   border-radius:0px;
   border-width:0px;
   box-shadow:$box-shadow;
@@ -39,10 +42,6 @@ a {
 .one_fourth{
   float:left;
   width:25%;
-}
-
-.medium_min_one_third{
-  @include grid_min($tablet,33%);
 }
 
 .inner_grid{

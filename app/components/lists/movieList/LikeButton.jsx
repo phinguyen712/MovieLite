@@ -32,16 +32,17 @@ const LikeButton = React.createClass({
     //Determine if this Movie is in our likedMovies reducer
     if(likedMovies){
       const likedMoviesID = likedMovies.map((likedMovie)=>{
-        return likedMovie.imdbID;
+        return likedMovie.id;
       });
-      hasLiked = likedMoviesID.indexOf(movie.imdbID);
+      hasLiked = likedMoviesID.indexOf(movie.id);
+
     }
 
     return(
-      <button className={this.buttonColor(movie,hasLiked)}
+      <i className={this.buttonColor(movie,hasLiked)}
         onClick={()=>this.toggleLike(movie,hasLiked)}
       >
-      </button>
+      </i>
 
     );
   }
