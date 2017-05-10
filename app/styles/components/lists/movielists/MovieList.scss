@@ -5,6 +5,7 @@
     cursor:pointer;
   }
 }
+
 .movie_list{
   padding:5px;
   float:left;
@@ -59,6 +60,7 @@
     font-size:$sml-font;
     color:$text-color;
   }
+
   .overview{
     margin-bottom:$sml-gap;
     color:$text-color;
@@ -71,11 +73,13 @@
     -webkit-line-clamp: 6; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
+
   .two_fourth{
     text-align:left;
     position:relative;
     margin-top:-20px
   }
+
   .content_container{
     margin-left:10px;
   }

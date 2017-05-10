@@ -6,7 +6,8 @@ const React = require('react'),
 const SearchForm = React.createClass({
 
   //searh OMDB for lists of movies or series
-  searchMovie(){
+  searchMovie(e){
+    e.preventDefault();
     const
       url ='https://api.themoviedb.org/3/search/movie?api_key=bafdaffd163f35788949bc2d842955c3',
       {dispatch, searchCategory} = this.props,
