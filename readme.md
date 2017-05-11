@@ -1,11 +1,11 @@
 ## Background
 This is a simple movie app that uses https://www.themoviedb.org/
-- Shows movies that are currently Playing
-- Search features
+- Show movies that are currently Playing
+- Search for movies
 - Users can add movies to their "favorite's list"
 
 ## Getting Started
-If you don't have webpack installed yet, you can run the command below:
+If you don't have webpack installed yet, you can run the command below.
 ```bash
 npm install webpack -g
 ```
@@ -19,7 +19,7 @@ npm install
 This will install all of your node modules.
 
 ## Running
-To run the project, simply run the following command
+To run the project, simply run the following commands.
 ```bash
 webpack -w
 ```
